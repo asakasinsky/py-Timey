@@ -15,6 +15,8 @@ OPTIONS = {
     'plist': {
         'LSUIElement': True,
     },
+    'includes': ['six', 'packaging', 'packaging.version',
+             'packaging.specifiers', 'packaging.requirements'],
     'packages': ['rumps'],
     "resources": [
         'Ship_Brass_Bell-Mike_Koenig-1458750630.mp3',
