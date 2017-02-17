@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# rumps: Ridiculously Uncomplicated Mac os x Python Statusbar apps.
-# Copyright: (c) 2013, Jared Suttles. All rights reserved.
+# rumps: Ridiculously Uncomplicated macOS Python Statusbar apps.
+# Copyright: (c) 2015, Jared Suttles. All rights reserved.
 # License: BSD, see LICENSE for details.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-from collections import OrderedDict as _OrderedDict
+try:  # Python 2.7+
+    from collections import OrderedDict as _OrderedDict
+except ImportError:
+    from .packages.ordereddict import OrderedDict as _OrderedDict
 
 
 # ListDict: OrderedDict subclass with insertion methods for modifying the order of the linked list in O(1) time
